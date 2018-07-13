@@ -11,14 +11,13 @@ class Artist < ActiveRecord::Base
   end
 
   def genre_count
-    self.songs.inject(0) do |sum, song|
-      if song.genre
-        sum += 1
-      else
-        sum
-      end
-      
-    end
 
+    self.songs.inject(0) do |sum, song|
+        if song.genre
+          sum += 1
+        else
+          sum
+        end
+    end
   end
 end
