@@ -17,8 +17,7 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.songs.collect do |song|
-      song.artist ? song.artist.name
-    end
+    self.songs.collect {|song| song.artist ? song.artist.name : next }
+    end.compact
   end
 end
