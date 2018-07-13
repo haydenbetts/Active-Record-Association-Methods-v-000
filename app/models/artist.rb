@@ -17,6 +17,8 @@ class Artist < ActiveRecord::Base
       if song.genre
         sum += 1
       else
+        sum
+      end
     end
 
   end
