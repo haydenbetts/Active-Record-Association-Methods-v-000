@@ -11,6 +11,5 @@ class Song < ActiveRecord::Base
   def drake_made_this
     binding.pry
     self.artist = Artist.new(name: "Drake")
-    self.artist
   end
 end
