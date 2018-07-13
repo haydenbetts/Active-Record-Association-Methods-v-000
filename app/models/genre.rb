@@ -7,7 +7,13 @@ class Genre < ActiveRecord::Base
   end
 
   def artist_count
-    # return the number of artists associated with the genre
+    self.songs.inject(0) do |sum, song|
+        if song.artist
+          sum += 1
+        else
+          sum
+        end
+    end
   end
 
   def all_artist_names
