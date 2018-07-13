@@ -14,8 +14,9 @@ class Artist < ActiveRecord::Base
     #return the number of genres associated with the artist
     # inject
     self.songs.inject(0) do |sum, song|
-      if song.
-      result + element if song.genre}
+      if song.genre
+        sum += 1
+      else
     end
 
   end
